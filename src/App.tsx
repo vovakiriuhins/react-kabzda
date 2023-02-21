@@ -5,15 +5,24 @@ import './App.css';
 function App() {
     return (
         <div>
+            <AppTitle/>
             <Rating/>
             <Accordion/>
+            <Rating/>
         </div>
     );
+}
+
+function AppTitle() {
+    return (
+        <>This is app component</>
+    )
 }
 
 function Rating() {
     return (
         <div>
+            <Star/>
             <Star/>
             <Star/>
             <Star/>
