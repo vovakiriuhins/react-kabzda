@@ -7,27 +7,27 @@ function App() {
     return (
         <div>
             <PageTitle title={"This is app component"}/>
-            <PageTitle friends={"My friends"}/>
+            <PageTitle title={"My friends"}/>
             <Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={0}/>
 
-            <Accordion title={"Menu"}/>
-            <Accordion title={"Users"}/>
+            <Accordion titleValue={"Menu"}/>
+            <Accordion titleValue={"Users"}/>
         </div>
     );
 }
 
-function PageTitle(props: any) {
-    return (
-        <div>
-            <h1>{props.titleValue}</h1>
-            <h5>{props.friends}</h5>
-        </div>
+type PageTitlePropsType = {
+    title: string
+}
 
-)
+function PageTitle(props: PageTitlePropsType) {
+    return (
+        <h1>{props.title}</h1>
+    )
 }
 
 
